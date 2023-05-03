@@ -1,0 +1,34 @@
+Originator: My initial state is: kevin
+ 
+Caretaker: Saving the current state...
+Originator: I'm doing some activity.
+Originator: and my state has changed to: BmiwGpKIQJUUjkhYeAFOaEiEbbErCJ
+ 
+Caretaker: Saving the current state...
+Originator: I'm doing some activity.
+Originator: and my state has changed to: TRJJQfwJhswpDlVhycOWebvpLHQXvB
+ 
+Caretaker: Saving the current state...
+Originator: I'm doing some activity.
+Originator: and my state has changed to: MLMgzQQhQoaOvVyiwkLnJTSELLXZRg
+Caretaker: Here's the list of mementos:
+2023-05-03 01:20:38 / (kevin)
+2023-05-03 01:20:38 / (BmiwGpKIQJUUjkhYeAFOaEiEbbErCJ)
+2023-05-03 01:20:38 / (TRJJQfwJhswpDlVhycOWebvpLHQXvB)
+ 
+Caretaker: Restoring state to: 2023-05-03 01:20:38 / (TRJJQfwJhswpDlVhycOWebvpLHQXvB)
+Originator: My state has changed to: TRJJQfwJhswpDlVhycOWebvpLHQXvB
+ 
+Caretaker: Restoring state to: 2023-05-03 01:20:38 / (BmiwGpKIQJUUjkhYeAFOaEiEbbErCJ)
+Originator: My state has changed to: BmiwGpKIQJUUjkhYeAFOaEiEbbErCJ
+ 
+Caretaker: Here's the list of mementos:
+2023-05-03 01:20:38 / (kevin)
+ 
+Originator: I'm doing some activity.
+Originator: and my state has changed to: FjqDBsRDcdTwvvJmWhKJHNLPLitTZH
+ 
+Caretaker: Saving the current state...
+Caretaker: Here's the list of mementos:
+2023-05-03 01:20:38 / (kevin)
+2023-05-03 01:20:38 / (FjqDBsRDcdTwvvJmWhKJHNLPLitTZH)

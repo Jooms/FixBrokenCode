@@ -1,0 +1,6 @@
+Have node installed
+
+Do the following:
+
+$npm install -g typescript #sudo may be required
+$tsc memento.ts && node memento.js
