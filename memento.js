@@ -31,7 +31,7 @@ var Originator = /** @class */ (function () {
     //Backup prior or state will be lost
     Originator.prototype.doSomething = function () {
         console.log('Originator: I\'m doing some activity.');
-        this.state = "";
+        this.state = this.generateRandomString();
         console.log("Originator: and my state has changed to: ".concat(this.state));
     };
     //Just for generating the random string
@@ -66,6 +66,15 @@ var Caretaker = /** @class */ (function () {
         //Returns new memento object of current state and pushes to stack
         this.mementos.push(this.originator.save());
     };
+    //prints all memeontos in the stack
+    Caretaker.prototype.showHistory = function () {
+        console.log('Caretaker: Here\'s the list of mementos:');
+        for (var _i = 0, _a = this.mementos; _i < _a.length; _i++) {
+            var memento = _a[_i];
+            console.log(memento.getMemento());
+        }
+        console.log('');
+    };
     //pops a memento off the stack and gives it to caretaker to set the current memento to
     Caretaker.prototype.undo = function () {
         if (!this.mementos.length) {
@@ -76,19 +85,20 @@ var Caretaker = /** @class */ (function () {
         this.originator.restore(memento);
         console.log('');
     };
-    //prints all memeontos in the stack
-    Caretaker.prototype.showHistory = function () {
-        console.log('Caretaker: Here\'s the list of mementos:');
-        for (var _i = 0, _a = this.mementos; _i < _a.length; _i++) {
-            var memento = _a[_i];
-            console.log(memento.getMemento());
-        }
-        console.log('');
-    };
     return Caretaker;
 }());
-//Do an initial activity
-var originator = new Originator('kevin');
-//Allows for the state to be saved
-var caretaker = new Caretaker(originator);
-//IMPLEMENT HERE
+var o = new Originator("kevin");
+var c = new Caretaker(o);
+c.backup();
+o.doSomething();
+c.backup();
+o.doSomething();
+c.backup();
+o.doSomething();
+c.showHistory();
+c.undo();
+c.undo();
+c.showHistory();
+o.doSomething();
+c.backup();
+c.showHistory();

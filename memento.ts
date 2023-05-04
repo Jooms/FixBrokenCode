@@ -1,5 +1,10 @@
 //Adapted from https://refactoring.guru/design-patterns/memento
 //Adapted by Prasanna Vaddkkepurakkal & David Coles
+interface Memento {
+    getState(): string
+    getMemento(): string
+    getDate(): string
+}
 
 //Infastructure for the Memento
 class MementoClass implements Memento {
@@ -41,7 +46,7 @@ class Originator {
     //Backup prior or state will be lost
     public doSomething(): void {
         console.log('Originator: I\'m doing some activity.');
-        this.state = "";
+        this.state = this.generateRandomString();
         console.log(`Originator: and my state has changed to: ${this.state}`);
     }
 
@@ -107,4 +112,26 @@ class Caretaker {
 
 }
 
-//IMPLEMENT HERE
+let o = new Originator("kevin");
+let c = new Caretaker(o);
+
+c.backup();
+o.doSomething();
+
+c.backup();
+o.doSomething();
+
+c.backup();
+o.doSomething();
+c.showHistory();
+
+c.undo();
+
+c.undo();
+
+c.showHistory();
+
+o.doSomething();
+
+c.backup();
+c.showHistory();
